@@ -1,17 +1,14 @@
-## My Project
 
-TODO: Fill this README out!
+## Code Samples
 
-Be sure to:
+This repository contains the sample code presented in the Developing on AWS online training.
 
-* Change the title in this README
-* Edit your repository description on GitHub
+In the respository you'll find:
 
-## Security
-
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
-
-## License
-
-This library is licensed under the MIT-0 License. See the LICENSE file.
-
+```
+.
+├── java                # java samples
+├── net                 # .NET samples
+├── python              # python samples
+└── web-frontend        # sample front end for the SAM applications
+```
