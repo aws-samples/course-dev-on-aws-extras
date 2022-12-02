@@ -1,0 +1,11 @@
+# install mitmproxy
+
+brew install mitmproxy
+
+# add the mitmproxy to cerifi in the venv
+
+cat ~/.mitmproxy/mitmproxy-ca-cert.pem >> .venv/lib/python3.9/site-packages/certifi/cacert.pem
+
+# run with the proxy configured
+
+HTTPS_PROXY=http://localhost:8080
