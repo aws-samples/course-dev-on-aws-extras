@@ -53,7 +53,7 @@ Resources:
     Properties:
       CodeUri: back-end-python/gameactions/
       Handler: app.trivia_newgame
-      Runtime: python3.7
+      Runtime: python3.8
       Environment:
         Variables:
           TABLE_NAME: !Ref TriviaConnections
@@ -101,7 +101,7 @@ Resources:
     Properties:
       CodeUri: back-end-python/gameactions/
       Handler: app.trivia_joingame
-      Runtime: python3.7
+      Runtime: python3.8
       Environment:
         Variables:
           TABLE_NAME: !Ref TriviaConnections
@@ -149,7 +149,7 @@ Resources:
     Properties:
       CodeUri: back-end-python/gameactions/
       Handler: app.trivia_startgame
-      Runtime: python3.7
+      Runtime: python3.8
       Environment:
         Variables:
           TABLE_NAME: !Ref TriviaConnections
@@ -204,7 +204,7 @@ Resources:
     Properties:
       CodeUri: back-end-python/gameactions/
       Handler: app.trivia_answer
-      Runtime: python3.7
+      Runtime: python3.8
       Environment:
         Variables:
           TABLE_NAME: !Ref TriviaConnections
@@ -238,7 +238,7 @@ Resources:
     Properties:
       CodeUri: back-end-python/gameactions/
       Handler: app.trivia_question
-      Runtime: python3.7
+      Runtime: python3.8
       Environment:
         Variables:
           TABLE_NAME: !Ref TriviaConnections
@@ -258,7 +258,7 @@ Resources:
     Properties:
       CodeUri: back-end-python/gameactions/
       Handler: app.trivia_calculate_scores
-      Runtime: python3.7
+      Runtime: python3.8
       Environment:
         Variables:
           TABLE_NAME: !Ref TriviaConnections
