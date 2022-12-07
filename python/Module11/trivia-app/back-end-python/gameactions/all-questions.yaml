@@ -1,0 +1,161 @@
+- id: q001
+  question: "What is the capital of India?"
+  options:
+    - Mumbai
+    - Delhi
+    - Bangalore
+    - Hyderabad
+  answer: "Delhi"
+
+- id: q002
+  question: "What is the capital of Canada?"
+  options:
+    - Toronto
+    - Montreal
+    - Vancouver
+    - Ottawa
+  answer: "Ottawa"
+
+- id: q003
+  question: "What is the capital of Australia?"
+  options:
+    - Sydney
+    - Melbourne
+    - Canberra
+    - Brisbane
+  answer: "Canberra"
+
+- id: q004
+  question: "What is the capital of The Philippines?"
+  options:
+    - Quezon City
+    - Manila
+    - Davao City
+    - Caloocan
+  answer: "Manila"
+
+- id: q005
+  question: "What is the capital of Mongolia?"
+  options:
+    - Ulaanbaatar
+    - Erdenet
+    - Darkhan
+    - Choibalsan
+  answer: "Ulaanbaatar"
+
+- id: q006
+  question: "What is the capital of Afghanistan?"
+  options:
+    - Kandahar
+    - Kabul
+    - Herat
+    - Jalalabad
+  answer: "Kabul"
+
+- id: q007
+  question: "What is the capital of Albania?"
+  options:
+    - Durres
+    - Elbasan
+    - Vlore
+    - Tirana
+  answer: "Tirana"
+
+- id: q008
+  question: "What is the capital of Algeria?"
+  options:
+    - Algiers
+    - Béchar
+    - Constantine
+    - Batna
+  answer: "Algiers"
+
+- id: q009
+  question: "What is the capital of Angola?"
+  options:
+    - N'dalatando
+    - Benguela 
+    - Luanda
+    - Uíge
+  answer: "Luanda"
+
+- id: q010
+  question: "What is the capital of Antigua and Barbuda?"
+  options:
+    - All Saints
+    - Saint John's
+    - Bolans
+    - Codrington 
+  answer: "Saint John's"
+
+- id: q011
+  question: "What is the capital of Belarus?"
+  options:
+    - Barysaw
+    - Maladzyechna
+    - Maryina Horka
+    - Minsk
+  answer: "Minsk"
+
+- id: q012
+  question: "What is the capital of Bhutan?"
+  options:
+    - Phuntsholing
+    - Thimphu
+    - Punakha
+    - Gelephu
+  answer: "Thimphu"
+
+- id: q013
+  question: "What is the capital of Brazil?"
+  options:
+    - São Paulo
+    - Rio de Janeiro
+    - Belo Horizonte
+    - Brasilia
+  answer: "Brasilia"
+
+- id: q014
+  question: "What is the capital of Bulgaria?"
+  options:
+    - Plovdiv
+    - Sofia
+    - Varna
+    - Burgas
+  answer: "Sofia"
+
+- id: q015
+  question: "What is the capital of Burkina Faso?"
+  options:
+    - Bobo-Dioulasso
+    - Ouagadougou
+    - Ouahigouya
+    - Kongoussi
+  answer: "Ouagadougou"
+
+- id: q016
+  question: "What is the capital of Cape Verde?"
+  options:
+    - Mindelo
+    - Espargos
+    - Tarrafal
+    - Praia
+  answer: "Praia"
+
+- id: q017
+  question: "What is the capital of Cuba?"
+  options:
+    - Camagüey
+    - Havana
+    - Holguín
+    - Santa Clara
+  answer: "Havana"
+
+- id: q018
+  question: "What is the capital of Dominican Republic?"
+  options:
+    - Santo Domingo
+    - Santiago de los Caballeros
+    - San Pedro de Macorís
+    - San Cristóbal
+  answer: "Santo Domingo"
