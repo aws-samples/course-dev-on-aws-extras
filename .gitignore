@@ -110,6 +110,9 @@ fabric.properties
 # maven target
 target/
 
+.gradle
+build/
+
 # sam settings
 samconfig.toml
 
