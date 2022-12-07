@@ -3,6 +3,7 @@ import botocore
 
 s3_client = boto3.client('s3', region_name='us-east-1')
 
+
 def verify_bucket_name(bucket_name):
     try:
         s3_client.head_bucket(Bucket=bucket_name)
@@ -14,4 +15,5 @@ def verify_bucket_name(bucket_name):
         if error_code == 403:
             raise SystemExit('This bucket is already owned by another AWS account')
 
-verify_bucket_name("morgan")
+
+verify_bucket_name("<bucket name>")

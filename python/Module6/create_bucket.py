@@ -1,4 +1,5 @@
 import boto3
+import botocore
 
 s3_client = boto3.client('s3', region_name='us-east-1')
 
@@ -21,5 +22,5 @@ def create_bucket(bucket_name):
     waiter = s3_client.get_waiter('bucket_exists')
     waiter.wait(Bucket=bucket_name)
 
-verify_bucket_name("<bucket name>")  
-create_bucket("<bucket name>")
+verify_bucket_name("<bucketname>")
+create_bucket("<bucketname>")
