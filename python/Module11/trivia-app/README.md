@@ -1,5 +1,5 @@
 
-== Local dev
+## Local Dev
 
 ``` bash
 # install python requirements
@@ -12,7 +12,7 @@ pip3 install -r back-end-python/tests/requirements.txt
 open htmlcov/index.html
 ```
 
-== Deploy the Backend
+## Deploy the Backend
 
 ``` bash
 # build the application
@@ -22,9 +22,9 @@ sam build
 sam deploy --guided
 ```
 
-When the deployment completes note the `TriviaWebSocketApi` output.  It will look something like this `wss://xxxxxxxxxx.execute-api.ap-southeast-2.amazonaws.com/Prod`.
+When the deployment completes, note the `TriviaWebSocketApi` output.  It will look something like this `wss://xxxxxxxxxx.execute-api.ap-southeast-2.amazonaws.com/Prod`.
 
-== Launch the front end
+## Launch the front end
 
 Note: we need nodejs installed to build and run the front end. You might want to use something like [nvm](https://github.com/nvm-sh/nvm) to install nodejs.
 
