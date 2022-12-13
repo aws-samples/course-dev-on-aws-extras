@@ -10,9 +10,6 @@ def get_object(bucket_name, object_key):
     with open('airportsdownload.csv', 'wb') as f:
         s3_client.download_fileobj(bucket_name, object_key, f)
 
-
-
-
 def head_object(bucket_name, object_key):
     response = s3_client.head_object(
         Bucket=bucket_name,

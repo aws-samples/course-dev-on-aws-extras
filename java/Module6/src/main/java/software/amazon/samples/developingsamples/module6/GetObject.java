@@ -13,6 +13,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.nio.file.Paths;
 
 public class GetObject {
     public static void main(String[] args) {
@@ -22,9 +23,10 @@ public class GetObject {
                 .region(region)
                 .credentialsProvider(credentialsProvider)
                 .build();
-        printHeadObject(s3, "morgansamples3bucket", "airports.csv");
-        byte[] objectBytes = getObjectBytes(s3, buildObjectRequest("<bucketName>","<keyName>"));
-        writeBytesToFile(objectBytes, "/Documents");
+        String bucketName = System.getenv("MY_BUCKET");
+        printHeadObject(s3, bucketName, "airports.csv");
+        byte[] objectBytes = getObjectBytes(s3, buildObjectRequest("airports.csv",bucketName));
+        writeBytesToFile(objectBytes, Paths.get("").toAbsolutePath().toString()+"/airports.csv");
         s3.close();
     }
 

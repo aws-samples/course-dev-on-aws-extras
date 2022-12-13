@@ -9,7 +9,7 @@ public class CreateBucket
     public static async Task Main(string[] args)
     {
         IAmazonS3 s3Client = new AmazonS3Client(RegionEndpoint.USEast1);
-        String bucketName = "<bucket name here>";
+        String bucketName = "<bucketname>";
 
         BucketExists(s3Client, bucketName);
         await CreateBucketAsync(s3Client,bucketName);
@@ -40,6 +40,7 @@ public class CreateBucket
             };
 
             var response = await client.PutBucketAsync(request);
+            Console.WriteLine("Bucket created!");
             return response.HttpStatusCode == System.Net.HttpStatusCode.OK;
         }
         catch (AmazonS3Exception ex)
