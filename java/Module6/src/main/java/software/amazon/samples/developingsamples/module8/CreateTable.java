@@ -11,8 +11,8 @@ public class CreateTable
 {
     public static void main(String[] args) {
         DynamoDbClient ddb = DynamoDbClient.builder().build();
-        String tableName = "Notes";
-        String keyName = "NotesID";
+        String tableName = "Notes3";
+        String keyName = "StudentId";
 
         System.out.println("Listing tables...");
         listTables(ddb);
@@ -21,7 +21,7 @@ public class CreateTable
         boolean result = createTable(ddb, tableName, keyName);
 
         if(result) {
-            System.out.println("New table is " + result);
+            System.out.println("New table is created.");
             System.out.println("Updating table throughput...");
             updateTable(ddb, tableName);
             System.out.println("Deleting table...");
@@ -80,6 +80,17 @@ public class CreateTable
 
         try{
             ddb.updateTable(request);
+
+            while(true) {
+                DescribeTableRequest tableRequest = DescribeTableRequest.builder()
+                        .tableName(tableName)
+                        .build();
+                DescribeTableResponse response = ddb.describeTable(tableRequest);
+                System.out.println("Table status after update: " + response.table().tableStatusAsString());
+                if(response.table().tableStatusAsString().equals("ACTIVE")) {
+                    break;
+                }
+            }
         } catch (DynamoDbException e) {
             System.out.println(e.getMessage());
         }

@@ -1,10 +1,12 @@
 import boto3
 
 dynamodb = boto3.resource('dynamodb')
+tableName = "Notes3"
 
 def create_table():
+    print("Creating table...")
     table = dynamodb.create_table(
-        TableName='Notes',
+        TableName=tableName,
         KeySchema=[
             {
                 'AttributeName': 'UserId',
@@ -33,20 +35,34 @@ def create_table():
 
     table.wait_until_exists()
 
-    print(table.item_count)
+    print("Table has been created!")
 
 def update_table():
-    table = dynamodb.Table('Notes')
+    table = dynamodb.Table(tableName)
     table = table.update(
         ProvisionedThroughput={
             'ReadCapacityUnits': 7,
             'WriteCapacityUnits': 7
         })
 
+    while True:
+        response = table.meta.client.describe_table(
+            TableName=tableName
+        )
+        print(response['Table']['TableStatus'])
+        if response['Table']['TableStatus'] == 'ACTIVE':
+            break
+
+    print("Table has been updated!")
+
+
 def delete_table():
     response = dynamodb.meta.client.delete_table(
-        TableName='Notes'
+        TableName=tableName
     )
+
+    print("Table has been deleted!")
+
 
 def list_tables():
     response = dynamodb.meta.client.list_tables(

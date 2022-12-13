@@ -5,7 +5,45 @@ namespace DynamoDBTables
 {
     public class DynamoDBTables
     {
-        private static readonly string _tableName = "Notes";
+        private static readonly string _tableName = "Notes3";
+
+         public static void Main()
+        {
+            var client = new AmazonDynamoDBClient();
+
+            var result = CreateExampleTable(client);
+
+            if (!result.Result)
+            {
+                Console.WriteLine("Could not create example table.");
+            }
+
+            result = ListMyTables(client);
+
+            if (!result.Result)
+            {
+                Console.WriteLine("Could not list tables.");
+                Console.WriteLine("You must delete the " + _tableName + " table yourself");
+            }
+
+
+            result = UpdateExampleTable(client);
+
+            if (!result.Result)
+            {
+                Console.WriteLine("Could not update example table.");
+                Console.WriteLine("You must delete the " + _tableName + " table yourself");
+            }
+
+            result = DeleteExampleTable(client);
+
+            if (!result.Result)
+            {
+                Console.WriteLine("Could not delete example table.");
+                Console.WriteLine("You must delete the " + _tableName + " table yourself");
+            }
+        }
+    
 
         public static async Task<bool> CreateExampleTable(AmazonDynamoDBClient client)
         {
@@ -127,43 +165,6 @@ namespace DynamoDBTables
             } while (status != "ACTIVE");
 
             return true;
-        }
-
-        static void Main()
-        {
-            var client = new AmazonDynamoDBClient();
-
-            var result = CreateExampleTable(client);
-
-            if (!result.Result)
-            {
-                Console.WriteLine("Could not create example table.");
-            }
-
-            result = ListMyTables(client);
-
-            if (!result.Result)
-            {
-                Console.WriteLine("Could not list tables.");
-                Console.WriteLine("You must delete the " + _tableName + " table yourself");
-            }
-
-
-            result = UpdateExampleTable(client);
-
-            if (!result.Result)
-            {
-                Console.WriteLine("Could not update example table.");
-                Console.WriteLine("You must delete the " + _tableName + " table yourself");
-            }
-
-            result = DeleteExampleTable(client);
-
-            if (!result.Result)
-            {
-                Console.WriteLine("Could not delete example table.");
-                Console.WriteLine("You must delete the " + _tableName + " table yourself");
-            }
         }
     }
 }
