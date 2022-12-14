@@ -1,5 +1,6 @@
 {
   "name": "trivia-app",
+  "homepage": "/exercises/arch-trivia-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
