@@ -9,6 +9,5 @@ In the respository you'll find:
 .
 ├── java                # java samples
 ├── net                 # .NET samples
-├── python              # python samples
-└── web-frontend        # sample front end for the SAM applications
+└── python              # python samples
 ```
