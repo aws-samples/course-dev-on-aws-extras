@@ -1,2 +1,0 @@
-requests
-python_jose
