@@ -1,8 +1,8 @@
 using Amazon.S3;
 using Amazon.S3.Model;
 
-namespace ListBuckets;
-public class ListBuckets
+namespace ListObjects;
+public class ListObjects
 {
         public static async Task Main()
         {

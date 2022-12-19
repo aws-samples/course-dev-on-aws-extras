@@ -140,7 +140,7 @@ namespace DynamoDBTables
 
             await client.DeleteTableAsync(request);
 
-            Console.WriteLine("Table is being deleted...");
+            Console.WriteLine("Table is deleted...");
 
             return true;
         }

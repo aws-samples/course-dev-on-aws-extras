@@ -1,4 +1,4 @@
-package software.amazon.samples.developingsamples.module8;
+package software.amazon.samples.developingsamples.module6;
 
 import software.amazon.awssdk.enhanced.dynamodb.*;
 import software.amazon.awssdk.enhanced.dynamodb.model.GetItemEnhancedRequest;
@@ -27,7 +27,6 @@ public class NoteCRUD {
 
         retrieveNote(enhancedClient);
         addNote(enhancedClient);
-        retrieveNote(enhancedClient);
         displayFavoriteNotesForUser(enhancedClient);
     }
 
@@ -52,7 +51,6 @@ public class NoteCRUD {
 
     public static void displayFavoriteNotesForUser(DynamoDbEnhancedClient enhancedClient) {
         DynamoDbTable table = enhancedClient.table("Notes", TableSchema.fromBean(Note.class));
-        int countFavoriteNotes = 0;
 
         AttributeValue attributeValue = AttributeValue.builder()
                 .s("Yes")

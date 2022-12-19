@@ -16,11 +16,10 @@ def verify_bucket_name(bucket_name):
 
 
 def create_bucket(bucket_name):
-    s3_client.create_bucket(Bucket=bucket_name, CreateBucketConfiguration={
-    'LocationConstraint': 'us-west-2'})
+    s3_client.create_bucket(Bucket=bucket_name)
 
     waiter = s3_client.get_waiter('bucket_exists')
     waiter.wait(Bucket=bucket_name)
 
-verify_bucket_name("<bucketname>")
-create_bucket("<bucketname>")
+verify_bucket_name("morgan-dev-examp1e")
+create_bucket("morgan-dev-examp1e")

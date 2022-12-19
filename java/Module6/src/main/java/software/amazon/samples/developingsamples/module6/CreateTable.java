@@ -1,4 +1,4 @@
-package software.amazon.samples.developingsamples.module8;
+package software.amazon.samples.developingsamples.module6;
 
 import software.amazon.awssdk.core.waiters.WaiterResponse;
 import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
@@ -11,8 +11,8 @@ public class CreateTable
 {
     public static void main(String[] args) {
         DynamoDbClient ddb = DynamoDbClient.builder().build();
-        String tableName = "Notes3";
-        String keyName = "StudentId";
+        String tableName = "Notes";
+        String keyName = "UserId";
 
         System.out.println("Listing tables...");
         listTables(ddb);

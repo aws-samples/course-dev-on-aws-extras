@@ -9,7 +9,7 @@ public class CreateBucket
     public static async Task Main(string[] args)
     {
         IAmazonS3 s3Client = new AmazonS3Client(RegionEndpoint.USEast1);
-        String bucketName = "<bucketname>";
+        String bucketName = "morgan-example-dev";
 
         BucketExists(s3Client, bucketName);
         await CreateBucketAsync(s3Client,bucketName);

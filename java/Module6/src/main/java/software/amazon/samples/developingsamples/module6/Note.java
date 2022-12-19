@@ -1,4 +1,4 @@
-package software.amazon.samples.developingsamples.module8;
+package software.amazon.samples.developingsamples.module6;
 
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbAttribute;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;

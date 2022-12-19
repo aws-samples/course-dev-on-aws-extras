@@ -1,10 +1,9 @@
-package software.amazon.samples.developingsamples.module6;
+package software.amazon.samples.developingsamples.module4;
 
 import software.amazon.awssdk.auth.credentials.ProfileCredentialsProvider;
 import software.amazon.awssdk.core.async.SdkPublisher;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.s3.S3AsyncClient;
-import software.amazon.awssdk.services.s3.S3Client;
 import software.amazon.awssdk.services.s3.model.*;
 
 import java.util.ArrayList;

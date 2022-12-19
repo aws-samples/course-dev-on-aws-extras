@@ -1,7 +1,7 @@
 import boto3
 
 dynamodb = boto3.resource('dynamodb')
-tableName = "Notes3"
+tableName = "Notes2"
 
 def create_table():
     print("Creating table...")

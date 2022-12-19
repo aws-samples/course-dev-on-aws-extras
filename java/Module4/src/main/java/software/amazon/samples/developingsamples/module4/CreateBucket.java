@@ -1,4 +1,4 @@
-package software.amazon.samples.developingsamples.module6;
+package software.amazon.samples.developingsamples.module4;
 
 import software.amazon.awssdk.auth.credentials.ProfileCredentialsProvider;
 import software.amazon.awssdk.awscore.exception.AwsServiceException;
@@ -16,7 +16,7 @@ public class CreateBucket {
 
         public static void main(String[] args) throws URISyntaxException {
 
-            String bucketName = "<bucket name here>";
+            String bucketName = "morgan-example-dev";
 
             ProfileCredentialsProvider credentialsProvider = ProfileCredentialsProvider.create();
             Region region = Region.US_EAST_1;
@@ -46,10 +46,13 @@ public class CreateBucket {
             switch(awsEx.statusCode()) {
                 case 404:
                     System.out.println("No such bucket existing");
+                    break;
                 case 400:
                     System.out.println("Attempted to access a bucket from a Region other than where it exists");
+                    break;
                 case 403:
                     System.out.println("Permission errors in accessing bucket");
+                    break;
             }
         }
         return exists;

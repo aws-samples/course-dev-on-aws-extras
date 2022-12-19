@@ -1,4 +1,4 @@
-package software.amazon.samples.developingsamples.module6;
+package software.amazon.samples.developingsamples.module4;
 
 import software.amazon.awssdk.auth.credentials.ProfileCredentialsProvider;
 import software.amazon.awssdk.awscore.exception.AwsServiceException;
