@@ -2,7 +2,7 @@ import boto3
 import os
 import timeit
 
-bucket_name = os.environ["THE_BUCKET"]
+bucket_name = os.environ["MY_BUCKET"]
 client = boto3.client("s3")
 
 def getStringCount(search_string, s3_operation = "get_object"):
